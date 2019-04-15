@@ -1,0 +1,761 @@
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+conv2d_144 (Conv2D)          (None, 64, 64, 32)        896
+_________________________________________________________________
+leaky_re_lu_66 (LeakyReLU)   (None, 64, 64, 32)        0
+_________________________________________________________________
+dropout_66 (Dropout)         (None, 64, 64, 32)        0
+_________________________________________________________________
+conv2d_145 (Conv2D)          (None, 32, 32, 64)        18496
+_________________________________________________________________
+zero_padding2d_14 (ZeroPaddi (None, 33, 33, 64)        0
+_________________________________________________________________
+batch_normalization_53 (Batc (None, 33, 33, 64)        256
+_________________________________________________________________
+leaky_re_lu_67 (LeakyReLU)   (None, 33, 33, 64)        0
+_____________________________________________s____________________
+dropout_67 (Dropout)         (None, 33, 33, 64)        0
+_________________________________________________________________
+conv2d_146 (Conv2D)          (None, 17, 17, 128)       73856
+_________________________________________________________________
+batch_normalization_54 (Batc (None, 17, 17, 128)       512
+_________________________________________________________________
+leaky_re_lu_68 (LeakyReLU)   (None, 17, 17, 128)       0
+_________________________________________________________________
+dropout_68 (Dropout)         (None, 17, 17, 128)       0
+_________________________________________________________________
+conv2d_147 (Conv2D)          (None, 17, 17, 256)       295168
+_________________________________________________________________
+batch_normalization_55 (Batc (None, 17, 17, 256)       1024
+_________________________________________________________________
+leaky_re_lu_69 (LeakyReLU)   (None, 17, 17, 256)       0
+_________________________________________________________________
+dropout_69 (Dropout)         (None, 17, 17, 256)       0
+_________________________________________________________________
+conv2d_148 (Conv2D)          (None, 17, 17, 512)       1180160
+_________________________________________________________________
+batch_normalization_56 (Batc (None, 17, 17, 512)       2048
+_________________________________________________________________
+leaky_re_lu_70 (LeakyReLU)   (None, 17, 17, 512)       0
+_________________________________________________________________
+dropout_70 (Dropout)         (None, 17, 17, 512)       0
+_________________________________________________________________
+flatten_25 (Flatten)         (None, 147968)            0
+_________________________________________________________________
+dense_58 (Dense)             (None, 1)                 147969
+=================================================================
+Total params: 1,720,385
+Trainable params: 1,718,465
+Non-trainable params: 1,920
+_________________________________________________________________
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+input_36 (InputLayer)        (None, 128, 128, 3)       0
+_________________________________________________________________
+conv2d_149 (Conv2D)          (None, 128, 128, 32)      896
+_________________________________________________________________
+max_pooling2d_34 (MaxPooling (None, 64, 64, 32)        0
+_________________________________________________________________
+conv2d_150 (Conv2D)          (None, 64, 64, 64)        18496
+_________________________________________________________________
+max_pooling2d_35 (MaxPooling (None, 32, 32, 64)        0
+_________________________________________________________________
+conv2d_151 (Conv2D)          (None, 32, 32, 128)       73856
+_________________________________________________________________
+max_pooling2d_36 (MaxPooling (None, 16, 16, 128)       0
+_________________________________________________________________
+flatten_26 (Flatten)         (None, 32768)             0
+_________________________________________________________________
+dense_59 (Dense)             (None, 128)               4194432
+_________________________________________________________________
+dense_60 (Dense)             (None, 100)               12900
+_________________________________________________________________
+dense_61 (Dense)             (None, 128)               12928
+_________________________________________________________________
+dense_62 (Dense)             (None, 32768)             4227072
+_________________________________________________________________
+reshape_12 (Reshape)         (None, 16, 16, 128)       0
+_________________________________________________________________
+conv2d_152 (Conv2D)          (None, 16, 16, 128)       147584
+_________________________________________________________________
+up_sampling2d_34 (UpSampling (None, 32, 32, 128)       0
+_________________________________________________________________
+conv2d_153 (Conv2D)          (None, 32, 32, 64)        73792
+_________________________________________________________________
+up_sampling2d_35 (UpSampling (None, 64, 64, 64)        0
+_________________________________________________________________
+conv2d_154 (Conv2D)          (None, 64, 64, 32)        18464
+_________________________________________________________________
+up_sampling2d_36 (UpSampling (None, 128, 128, 32)      0
+_________________________________________________________________
+conv2d_155 (Conv2D)          (None, 128, 128, 3)       867
+=================================================================
+Total params: 8,781,287
+Trainable params: 8,781,287
+Non-trainable params: 0
+_________________________________________________________________
+Reading directory -> drive/My Drive/faces94
+Reading directory -> drive/My Drive/faces94/female
+Reading directory -> drive/My Drive/faces94/female/klclar
+Reading directory -> drive/My Drive/faces94/female/sbains
+Reading directory -> drive/My Drive/faces94/female/asewil
+Reading directory -> drive/My Drive/faces94/female/gotone
+Reading directory -> drive/My Drive/faces94/female/ksunth
+Reading directory -> drive/My Drive/faces94/female/kaknig
+Reading directory -> drive/My Drive/faces94/female/asamma
+Reading directory -> drive/My Drive/faces94/female/elduns
+Reading directory -> drive/My Drive/faces94/female/mbutle
+Reading directory -> drive/My Drive/faces94/female/drbost
+Reading directory -> drive/My Drive/faces94/female/anpage
+Reading directory -> drive/My Drive/faces94/female/lfso
+Reading directory -> drive/My Drive/faces94/female/ekavaz
+Reading directory -> drive/My Drive/faces94/female/astefa
+Reading directory -> drive/My Drive/faces94/female/yfhsie
+Reading directory -> drive/My Drive/faces94/female/vstros
+Reading directory -> drive/My Drive/faces94/female/9338535
+Reading directory -> drive/My Drive/faces94/female/9336923
+Reading directory -> drive/My Drive/faces94/female/slbirc
+Reading directory -> drive/My Drive/faces94/female/phughe
+Reading directory -> drive/My Drive/faces94/malestaff
+Reading directory -> drive/My Drive/faces94/malestaff/spacl
+Reading directory -> drive/My Drive/faces94/malestaff/voudcx
+Reading directory -> drive/My Drive/faces94/malestaff/lyond
+Reading directory -> drive/My Drive/faces94/malestaff/robin
+Reading directory -> drive/My Drive/faces94/malestaff/sandm
+Reading directory -> drive/My Drive/faces94/malestaff/cwang
+Reading directory -> drive/My Drive/faces94/malestaff/hartb
+Reading directory -> drive/My Drive/faces94/malestaff/ieorf
+Reading directory -> drive/My Drive/faces94/malestaff/fordj
+Reading directory -> drive/My Drive/faces94/malestaff/anonym2
+Reading directory -> drive/My Drive/faces94/malestaff/martin
+Reading directory -> drive/My Drive/faces94/malestaff/hensm
+Reading directory -> drive/My Drive/faces94/malestaff/macci
+Reading directory -> drive/My Drive/faces94/malestaff/moors
+Reading directory -> drive/My Drive/faces94/malestaff/anonym1
+Reading directory -> drive/My Drive/faces94/malestaff/doraj
+Reading directory -> drive/My Drive/faces94/malestaff/michael
+Reading directory -> drive/My Drive/faces94/malestaff/obeidn
+Reading directory -> drive/My Drive/faces94/malestaff/tony
+Reading directory -> drive/My Drive/faces94/malestaff/anonym
+Reading directory -> drive/My Drive/faces94/male
+Reading directory -> drive/My Drive/faces94/male/spletc
+Reading directory -> drive/My Drive/faces94/male/maasht
+Reading directory -> drive/My Drive/faces94/male/sjbeck
+Reading directory -> drive/My Drive/faces94/male/ajones
+Reading directory -> drive/My Drive/faces94/male/gmwate
+Reading directory -> drive/My Drive/faces94/male/svkriz
+Reading directory -> drive/My Drive/faces94/male/rmpugh
+Reading directory -> drive/My Drive/faces94/male/namull
+Reading directory -> drive/My Drive/faces94/male/9338489
+Reading directory -> drive/My Drive/faces94/male/kaatki
+Reading directory -> drive/My Drive/faces94/male/bplyce
+Reading directory -> drive/My Drive/faces94/male/dmwest
+Reading directory -> drive/My Drive/faces94/male/9416994
+Reading directory -> drive/My Drive/faces94/male/rarobi
+Reading directory -> drive/My Drive/faces94/male/rjlabr
+Reading directory -> drive/My Drive/faces94/male/djmart
+Reading directory -> drive/My Drive/faces94/male/gsreas
+Reading directory -> drive/My Drive/faces94/male/ndbank
+Reading directory -> drive/My Drive/faces94/male/rgharr
+Reading directory -> drive/My Drive/faces94/male/npmitc
+Reading directory -> drive/My Drive/faces94/male/khchan
+Reading directory -> drive/My Drive/faces94/male/lejnno
+Reading directory -> drive/My Drive/faces94/male/cwchoi
+Reading directory -> drive/My Drive/faces94/male/mefait
+Reading directory -> drive/My Drive/faces94/male/miaduc
+Reading directory -> drive/My Drive/faces94/male/khughe
+Reading directory -> drive/My Drive/faces94/male/asheal
+Reading directory -> drive/My Drive/faces94/male/gdhatc
+Reading directory -> drive/My Drive/faces94/male/smrobb
+Reading directory -> drive/My Drive/faces94/male/gpapaz
+Reading directory -> drive/My Drive/faces94/male/vpsavo
+Reading directory -> drive/My Drive/faces94/male/mpetti
+Reading directory -> drive/My Drive/faces94/male/kjwith
+Reading directory -> drive/My Drive/faces94/male/ajsega
+Reading directory -> drive/My Drive/faces94/male/kdjone
+Reading directory -> drive/My Drive/faces94/male/9332898
+Reading directory -> drive/My Drive/faces94/male/cjcarr
+Reading directory -> drive/My Drive/faces94/male/jgloma
+Reading directory -> drive/My Drive/faces94/male/sidick
+Reading directory -> drive/My Drive/faces94/male/jlemon
+Reading directory -> drive/My Drive/faces94/male/9326871
+Reading directory -> drive/My Drive/faces94/male/gpsmit
+Reading directory -> drive/My Drive/faces94/male/mberdo
+Reading directory -> drive/My Drive/faces94/male/cshubb
+Reading directory -> drive/My Drive/faces94/male/admars
+Reading directory -> drive/My Drive/faces94/male/cchris
+Reading directory -> drive/My Drive/faces94/male/pshurr
+Reading directory -> drive/My Drive/faces94/male/muthay
+Reading directory -> drive/My Drive/faces94/male/pmives
+Reading directory -> drive/My Drive/faces94/male/djbirc
+Reading directory -> drive/My Drive/faces94/male/rnpwil
+Reading directory -> drive/My Drive/faces94/male/nrclar
+Reading directory -> drive/My Drive/faces94/male/jcarte
+Reading directory -> drive/My Drive/faces94/male/gjnorm
+Reading directory -> drive/My Drive/faces94/male/pspliu
+Reading directory -> drive/My Drive/faces94/male/9338446
+Reading directory -> drive/My Drive/faces94/male/ambarw
+Reading directory -> drive/My Drive/faces94/male/nwilli
+Reading directory -> drive/My Drive/faces94/male/swsmit
+Reading directory -> drive/My Drive/faces94/male/ahodki
+Reading directory -> drive/My Drive/faces94/male/jdbenm
+Reading directory -> drive/My Drive/faces94/male/dioann
+Reading directory -> drive/My Drive/faces94/male/whussa
+Reading directory -> drive/My Drive/faces94/male/ggeorg
+Reading directory -> drive/My Drive/faces94/male/ccjame
+Reading directory -> drive/My Drive/faces94/male/jmedin
+Reading directory -> drive/My Drive/faces94/male/cgboyc
+Reading directory -> drive/My Drive/faces94/male/pacole
+Reading directory -> drive/My Drive/faces94/male/skumar
+Reading directory -> drive/My Drive/faces94/male/nahaig
+Reading directory -> drive/My Drive/faces94/male/jagrif
+Reading directory -> drive/My Drive/faces94/male/mdpove
+Reading directory -> drive/My Drive/faces94/male/cmkirk
+Reading directory -> drive/My Drive/faces94/male/cjdenn
+Reading directory -> drive/My Drive/faces94/male/swewin
+Reading directory -> drive/My Drive/faces94/male/ggrego
+Reading directory -> drive/My Drive/faces94/male/akatsi
+Reading directory -> drive/My Drive/faces94/male/ptnich
+Reading directory -> drive/My Drive/faces94/male/dcbowe
+Reading directory -> drive/My Drive/faces94/male/rmcoll
+Reading directory -> drive/My Drive/faces94/male/npbour
+Reading directory -> drive/My Drive/faces94/male/irdrew
+Reading directory -> drive/My Drive/faces94/male/rgspru
+Reading directory -> drive/My Drive/faces94/male/cferdo
+Reading directory -> drive/My Drive/faces94/male/dagran
+Reading directory -> drive/My Drive/faces94/male/jabins
+Reading directory -> drive/My Drive/faces94/male/dakram
+Reading directory -> drive/My Drive/faces94/male/wjalbe
+Reading directory -> drive/My Drive/faces94/male/mhwill
+Reading directory -> drive/My Drive/faces94/male/9338527
+Reading directory -> drive/My Drive/faces94/male/ndhagu
+Reading directory -> drive/My Drive/faces94/male/jrtobi
+Reading directory -> drive/My Drive/faces94/male/ajflem
+Reading directory -> drive/My Drive/faces94/male/rrowle
+Reading directory -> drive/My Drive/faces94/male/saedwa
+Reading directory -> drive/My Drive/faces94/male/mjhans
+Reading directory -> drive/My Drive/faces94/male/gjhero
+Reading directory -> drive/My Drive/faces94/male/9338519
+Reading directory -> drive/My Drive/faces94/male/rlocke
+Reading directory -> drive/My Drive/faces94/male/9338543
+Reading directory -> drive/My Drive/faces94/male/9338454
+Reading directory -> drive/My Drive/faces94/male/djhugh
+Reading directory -> drive/My Drive/faces94/male/saduah
+Reading directory -> drive/My Drive/faces94/male/nhrams
+Reading directory -> drive/My Drive/faces94/male/nrrbar
+Reading directory -> drive/My Drive/faces94/male/rsanti
+Reading directory -> drive/My Drive/faces94/male/ohpark
+Reading directory -> drive/My Drive/faces94/male/njmoor
+Reading directory -> drive/My Drive/faces94/male/9338462
+Reading directory -> drive/My Drive/faces94/male/9414649
+Reading directory -> drive/My Drive/faces94/male/csanch
+Reading directory -> drive/My Drive/faces94/male/9338497
+Reading directory -> drive/My Drive/faces94/male/cjsake
+/usr/local/lib/python3.6/dist-packages/keras/engine/training.py:490: UserWarning: Discrepancy between trainable weights and collected trainable weights, did you set `model.trainable` without calling `model.compile` after ?
+  'Discrepancy between trainable weights and collected trainable'
+0 [Discriminator -> loss: 4.720779, acc.: 12.50%] [Generator -> loss: 0.222425]
+1 [Discriminator -> loss: 0.071497, acc.: 100.00%] [Generator -> loss: 5.942633]
+2 [Discriminator -> loss: 0.049572, acc.: 100.00%] [Generator -> loss: 7.450179]
+3 [Discriminator -> loss: 0.030611, acc.: 100.00%] [Generator -> loss: 5.845811]
+4 [Discriminator -> loss: 0.116827, acc.: 96.88%] [Generator -> loss: 6.800227]
+5 [Discriminator -> loss: 0.054862, acc.: 100.00%] [Generator -> loss: 6.085580]
+6 [Discriminator -> loss: 0.462030, acc.: 70.31%] [Generator -> loss: 15.766514]
+7 [Discriminator -> loss: 1.180445, acc.: 51.56%] [Generator -> loss: 4.176375]
+8 [Discriminator -> loss: 2.003114, acc.: 50.00%] [Generator -> loss: 16.118095]
+9 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+10 [Discriminator -> loss: 0.004360, acc.: 100.00%] [Generator -> loss: 16.118095]
+11 [Discriminator -> loss: 0.080951, acc.: 95.31%] [Generator -> loss: 16.118095]
+12 [Discriminator -> loss: 0.001010, acc.: 100.00%] [Generator -> loss: 16.118095]
+13 [Discriminator -> loss: 0.000223, acc.: 100.00%] [Generator -> loss: 16.118095]
+14 [Discriminator -> loss: 0.000160, acc.: 100.00%] [Generator -> loss: 16.118095]
+15 [Discriminator -> loss: 0.000926, acc.: 100.00%] [Generator -> loss: 16.118095]
+16 [Discriminator -> loss: 0.000038, acc.: 100.00%] [Generator -> loss: 16.118095]
+17 [Discriminator -> loss: 0.000620, acc.: 100.00%] [Generator -> loss: 16.118095]
+18 [Discriminator -> loss: 0.000564, acc.: 100.00%] [Generator -> loss: 16.118095]
+19 [Discriminator -> loss: 0.000172, acc.: 100.00%] [Generator -> loss: 16.118095]
+20 [Discriminator -> loss: 0.000082, acc.: 100.00%] [Generator -> loss: 16.118095]
+21 [Discriminator -> loss: 0.000465, acc.: 100.00%] [Generator -> loss: 16.118095]
+22 [Discriminator -> loss: 0.001318, acc.: 100.00%] [Generator -> loss: 16.118095]
+23 [Discriminator -> loss: 0.000032, acc.: 100.00%] [Generator -> loss: 16.118095]
+24 [Discriminator -> loss: 0.000160, acc.: 100.00%] [Generator -> loss: 16.118095]
+25 [Discriminator -> loss: 0.000099, acc.: 100.00%] [Generator -> loss: 16.118095]
+26 [Discriminator -> loss: 0.000026, acc.: 100.00%] [Generator -> loss: 16.118095]
+27 [Discriminator -> loss: 0.000314, acc.: 100.00%] [Generator -> loss: 16.118095]
+28 [Discriminator -> loss: 0.000240, acc.: 100.00%] [Generator -> loss: 16.118095]
+29 [Discriminator -> loss: 0.000362, acc.: 100.00%] [Generator -> loss: 16.118095]
+30 [Discriminator -> loss: 0.000027, acc.: 100.00%] [Generator -> loss: 16.118095]
+31 [Discriminator -> loss: 0.000323, acc.: 100.00%] [Generator -> loss: 16.118095]
+32 [Discriminator -> loss: 0.000039, acc.: 100.00%] [Generator -> loss: 16.118095]
+33 [Discriminator -> loss: 0.000144, acc.: 100.00%] [Generator -> loss: 16.118095]
+34 [Discriminator -> loss: 0.000050, acc.: 100.00%] [Generator -> loss: 16.118095]
+35 [Discriminator -> loss: 0.000725, acc.: 100.00%] [Generator -> loss: 16.118095]
+36 [Discriminator -> loss: 0.000123, acc.: 100.00%] [Generator -> loss: 16.118095]
+37 [Discriminator -> loss: 0.000046, acc.: 100.00%] [Generator -> loss: 16.118095]
+38 [Discriminator -> loss: 0.000022, acc.: 100.00%] [Generator -> loss: 16.118095]
+39 [Discriminator -> loss: 0.000025, acc.: 100.00%] [Generator -> loss: 16.118095]
+40 [Discriminator -> loss: 0.000066, acc.: 100.00%] [Generator -> loss: 16.118095]
+41 [Discriminator -> loss: 0.000043, acc.: 100.00%] [Generator -> loss: 16.118095]
+42 [Discriminator -> loss: 0.000064, acc.: 100.00%] [Generator -> loss: 16.118095]
+43 [Discriminator -> loss: 0.000013, acc.: 100.00%] [Generator -> loss: 16.118095]
+44 [Discriminator -> loss: 0.000032, acc.: 100.00%] [Generator -> loss: 16.118095]
+45 [Discriminator -> loss: 0.000024, acc.: 100.00%] [Generator -> loss: 16.118095]
+46 [Discriminator -> loss: 0.000021, acc.: 100.00%] [Generator -> loss: 16.118095]
+47 [Discriminator -> loss: 0.000023, acc.: 100.00%] [Generator -> loss: 16.118095]
+48 [Discriminator -> loss: 0.000160, acc.: 100.00%] [Generator -> loss: 16.118095]
+49 [Discriminator -> loss: 0.000345, acc.: 100.00%] [Generator -> loss: 16.118095]
+50 [Discriminator -> loss: 0.000735, acc.: 100.00%] [Generator -> loss: 16.118095]
+51 [Discriminator -> loss: 0.000251, acc.: 100.00%] [Generator -> loss: 16.118095]
+52 [Discriminator -> loss: 0.000037, acc.: 100.00%] [Generator -> loss: 16.118095]
+53 [Discriminator -> loss: 0.000012, acc.: 100.00%] [Generator -> loss: 16.118095]
+54 [Discriminator -> loss: 0.000058, acc.: 100.00%] [Generator -> loss: 16.118095]
+55 [Discriminator -> loss: 0.000019, acc.: 100.00%] [Generator -> loss: 16.118095]
+56 [Discriminator -> loss: 0.000043, acc.: 100.00%] [Generator -> loss: 16.118095]
+57 [Discriminator -> loss: 0.000148, acc.: 100.00%] [Generator -> loss: 16.118095]
+58 [Discriminator -> loss: 0.000108, acc.: 100.00%] [Generator -> loss: 16.118095]
+59 [Discriminator -> loss: 0.000342, acc.: 100.00%] [Generator -> loss: 16.118095]
+60 [Discriminator -> loss: 0.000360, acc.: 100.00%] [Generator -> loss: 16.118095]
+61 [Discriminator -> loss: 0.000051, acc.: 100.00%] [Generator -> loss: 16.118095]
+62 [Discriminator -> loss: 0.000049, acc.: 100.00%] [Generator -> loss: 16.118095]
+63 [Discriminator -> loss: 0.000446, acc.: 100.00%] [Generator -> loss: 16.118095]
+64 [Discriminator -> loss: 0.000032, acc.: 100.00%] [Generator -> loss: 16.118095]
+65 [Discriminator -> loss: 0.000022, acc.: 100.00%] [Generator -> loss: 16.118095]
+66 [Discriminator -> loss: 0.000018, acc.: 100.00%] [Generator -> loss: 16.118095]
+67 [Discriminator -> loss: 0.000085, acc.: 100.00%] [Generator -> loss: 16.118095]
+68 [Discriminator -> loss: 0.000071, acc.: 100.00%] [Generator -> loss: 16.118095]
+69 [Discriminator -> loss: 0.000083, acc.: 100.00%] [Generator -> loss: 16.118095]
+70 [Discriminator -> loss: 0.000246, acc.: 100.00%] [Generator -> loss: 16.118095]
+71 [Discriminator -> loss: 0.000035, acc.: 100.00%] [Generator -> loss: 16.118095]
+72 [Discriminator -> loss: 0.000021, acc.: 100.00%] [Generator -> loss: 16.118095]
+73 [Discriminator -> loss: 0.000068, acc.: 100.00%] [Generator -> loss: 16.118095]
+74 [Discriminator -> loss: 0.000030, acc.: 100.00%] [Generator -> loss: 16.118095]
+75 [Discriminator -> loss: 0.000560, acc.: 100.00%] [Generator -> loss: 16.118095]
+76 [Discriminator -> loss: 0.000038, acc.: 100.00%] [Generator -> loss: 16.118095]
+77 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+78 [Discriminator -> loss: 0.000171, acc.: 100.00%] [Generator -> loss: 16.118095]
+79 [Discriminator -> loss: 0.000121, acc.: 100.00%] [Generator -> loss: 16.118095]
+80 [Discriminator -> loss: 0.000059, acc.: 100.00%] [Generator -> loss: 16.118095]
+81 [Discriminator -> loss: 0.000016, acc.: 100.00%] [Generator -> loss: 16.118095]
+82 [Discriminator -> loss: 0.000054, acc.: 100.00%] [Generator -> loss: 16.118095]
+83 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+84 [Discriminator -> loss: 0.000033, acc.: 100.00%] [Generator -> loss: 16.118095]
+85 [Discriminator -> loss: 0.000228, acc.: 100.00%] [Generator -> loss: 16.118095]
+86 [Discriminator -> loss: 0.000015, acc.: 100.00%] [Generator -> loss: 16.118095]
+87 [Discriminator -> loss: 0.000298, acc.: 100.00%] [Generator -> loss: 16.118095]
+88 [Discriminator -> loss: 0.000048, acc.: 100.00%] [Generator -> loss: 16.118095]
+89 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+90 [Discriminator -> loss: 0.000014, acc.: 100.00%] [Generator -> loss: 16.118095]
+91 [Discriminator -> loss: 0.000200, acc.: 100.00%] [Generator -> loss: 16.118095]
+92 [Discriminator -> loss: 0.000018, acc.: 100.00%] [Generator -> loss: 16.118095]
+93 [Discriminator -> loss: 0.000016, acc.: 100.00%] [Generator -> loss: 16.118095]
+94 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+95 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+96 [Discriminator -> loss: 0.000050, acc.: 100.00%] [Generator -> loss: 16.118095]
+97 [Discriminator -> loss: 0.000020, acc.: 100.00%] [Generator -> loss: 16.118095]
+98 [Discriminator -> loss: 0.000315, acc.: 100.00%] [Generator -> loss: 16.118095]
+99 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+100 [Discriminator -> loss: 0.000035, acc.: 100.00%] [Generator -> loss: 16.118095]
+101 [Discriminator -> loss: 0.000019, acc.: 100.00%] [Generator -> loss: 16.118095]
+102 [Discriminator -> loss: 0.000140, acc.: 100.00%] [Generator -> loss: 16.118095]
+103 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+104 [Discriminator -> loss: 0.000071, acc.: 100.00%] [Generator -> loss: 16.118095]
+105 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+106 [Discriminator -> loss: 0.000073, acc.: 100.00%] [Generator -> loss: 16.118095]
+107 [Discriminator -> loss: 0.000025, acc.: 100.00%] [Generator -> loss: 16.118095]
+108 [Discriminator -> loss: 0.000062, acc.: 100.00%] [Generator -> loss: 16.118095]
+109 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+110 [Discriminator -> loss: 0.000306, acc.: 100.00%] [Generator -> loss: 16.118095]
+111 [Discriminator -> loss: 0.000016, acc.: 100.00%] [Generator -> loss: 16.118095]
+112 [Discriminator -> loss: 0.000026, acc.: 100.00%] [Generator -> loss: 16.118095]
+113 [Discriminator -> loss: 0.000015, acc.: 100.00%] [Generator -> loss: 16.118095]
+114 [Discriminator -> loss: 0.000037, acc.: 100.00%] [Generator -> loss: 16.118095]
+115 [Discriminator -> loss: 0.000017, acc.: 100.00%] [Generator -> loss: 16.118095]
+116 [Discriminator -> loss: 0.000019, acc.: 100.00%] [Generator -> loss: 16.118095]
+117 [Discriminator -> loss: 0.000022, acc.: 100.00%] [Generator -> loss: 16.118095]
+118 [Discriminator -> loss: 0.000016, acc.: 100.00%] [Generator -> loss: 16.118095]
+119 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+120 [Discriminator -> loss: 0.000014, acc.: 100.00%] [Generator -> loss: 16.118095]
+121 [Discriminator -> loss: 0.000020, acc.: 100.00%] [Generator -> loss: 16.118095]
+122 [Discriminator -> loss: 0.000097, acc.: 100.00%] [Generator -> loss: 16.118095]
+123 [Discriminator -> loss: 0.000029, acc.: 100.00%] [Generator -> loss: 16.118095]
+124 [Discriminator -> loss: 0.000021, acc.: 100.00%] [Generator -> loss: 16.118095]
+125 [Discriminator -> loss: 0.000058, acc.: 100.00%] [Generator -> loss: 16.118095]
+126 [Discriminator -> loss: 0.000025, acc.: 100.00%] [Generator -> loss: 16.118095]
+127 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+128 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+129 [Discriminator -> loss: 0.000027, acc.: 100.00%] [Generator -> loss: 16.118095]
+130 [Discriminator -> loss: 0.000022, acc.: 100.00%] [Generator -> loss: 16.118095]
+131 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+132 [Discriminator -> loss: 0.000211, acc.: 100.00%] [Generator -> loss: 16.118095]
+133 [Discriminator -> loss: 0.000049, acc.: 100.00%] [Generator -> loss: 16.118095]
+134 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+135 [Discriminator -> loss: 0.000018, acc.: 100.00%] [Generator -> loss: 16.118095]
+136 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+137 [Discriminator -> loss: 0.000045, acc.: 100.00%] [Generator -> loss: 16.118095]
+138 [Discriminator -> loss: 0.000016, acc.: 100.00%] [Generator -> loss: 16.118095]
+139 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+140 [Discriminator -> loss: 0.000013, acc.: 100.00%] [Generator -> loss: 16.118095]
+141 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+142 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+143 [Discriminator -> loss: 0.000084, acc.: 100.00%] [Generator -> loss: 16.118095]
+144 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+145 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+146 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+147 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+148 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+149 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+150 [Discriminator -> loss: 0.000053, acc.: 100.00%] [Generator -> loss: 16.118095]
+151 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+152 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+153 [Discriminator -> loss: 0.000021, acc.: 100.00%] [Generator -> loss: 16.118095]
+154 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+155 [Discriminator -> loss: 0.000016, acc.: 100.00%] [Generator -> loss: 16.118095]
+156 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+157 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+158 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+159 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+160 [Discriminator -> loss: 0.000023, acc.: 100.00%] [Generator -> loss: 16.118095]
+161 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+162 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+163 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+164 [Discriminator -> loss: 0.000015, acc.: 100.00%] [Generator -> loss: 16.118095]
+165 [Discriminator -> loss: 0.000064, acc.: 100.00%] [Generator -> loss: 16.118095]
+166 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+167 [Discriminator -> loss: 0.000024, acc.: 100.00%] [Generator -> loss: 16.118095]
+168 [Discriminator -> loss: 0.000015, acc.: 100.00%] [Generator -> loss: 16.118095]
+169 [Discriminator -> loss: 0.000017, acc.: 100.00%] [Generator -> loss: 16.118095]
+170 [Discriminator -> loss: 0.000014, acc.: 100.00%] [Generator -> loss: 16.118095]
+171 [Discriminator -> loss: 0.000012, acc.: 100.00%] [Generator -> loss: 16.118095]
+172 [Discriminator -> loss: 0.000038, acc.: 100.00%] [Generator -> loss: 16.118095]
+173 [Discriminator -> loss: 0.000048, acc.: 100.00%] [Generator -> loss: 16.118095]
+174 [Discriminator -> loss: 0.000039, acc.: 100.00%] [Generator -> loss: 16.118095]
+175 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+176 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+177 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+178 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+179 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+180 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+181 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+182 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+183 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+184 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+185 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+186 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+187 [Discriminator -> loss: 0.000015, acc.: 100.00%] [Generator -> loss: 16.118095]
+188 [Discriminator -> loss: 0.000011, acc.: 100.00%] [Generator -> loss: 16.118095]
+189 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+190 [Discriminator -> loss: 0.000042, acc.: 100.00%] [Generator -> loss: 16.118095]
+191 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+192 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+193 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+194 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+195 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+196 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+197 [Discriminator -> loss: 0.000030, acc.: 100.00%] [Generator -> loss: 16.118095]
+198 [Discriminator -> loss: 0.000018, acc.: 100.00%] [Generator -> loss: 16.118095]
+199 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+200 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+201 [Discriminator -> loss: 0.000041, acc.: 100.00%] [Generator -> loss: 16.118095]
+202 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+203 [Discriminator -> loss: 0.000012, acc.: 100.00%] [Generator -> loss: 16.118095]
+204 [Discriminator -> loss: 0.000011, acc.: 100.00%] [Generator -> loss: 16.118095]
+205 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+206 [Discriminator -> loss: 0.000036, acc.: 100.00%] [Generator -> loss: 16.118095]
+207 [Discriminator -> loss: 0.000048, acc.: 100.00%] [Generator -> loss: 16.118095]
+208 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+209 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+210 [Discriminator -> loss: 0.000014, acc.: 100.00%] [Generator -> loss: 16.118095]
+211 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+212 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+213 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+214 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+215 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+216 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+217 [Discriminator -> loss: 0.000200, acc.: 100.00%] [Generator -> loss: 16.118095]
+218 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+219 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+220 [Discriminator -> loss: 0.000015, acc.: 100.00%] [Generator -> loss: 16.118095]
+221 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+222 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+223 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+224 [Discriminator -> loss: 0.000035, acc.: 100.00%] [Generator -> loss: 16.118095]
+225 [Discriminator -> loss: 0.000046, acc.: 100.00%] [Generator -> loss: 16.118095]
+226 [Discriminator -> loss: 0.000056, acc.: 100.00%] [Generator -> loss: 16.118095]
+227 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+228 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+229 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+230 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+231 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+232 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+233 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+234 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+235 [Discriminator -> loss: 0.000021, acc.: 100.00%] [Generator -> loss: 16.118095]
+236 [Discriminator -> loss: 0.000047, acc.: 100.00%] [Generator -> loss: 16.118095]
+237 [Discriminator -> loss: 0.000130, acc.: 100.00%] [Generator -> loss: 16.118095]
+238 [Discriminator -> loss: 0.000016, acc.: 100.00%] [Generator -> loss: 16.118095]
+239 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+240 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+241 [Discriminator -> loss: 0.000020, acc.: 100.00%] [Generator -> loss: 16.118095]
+242 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+243 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+244 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+245 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+246 [Discriminator -> loss: 0.000014, acc.: 100.00%] [Generator -> loss: 16.118095]
+247 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+248 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+249 [Discriminator -> loss: 0.000033, acc.: 100.00%] [Generator -> loss: 16.118095]
+250 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+251 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+252 [Discriminator -> loss: 0.000012, acc.: 100.00%] [Generator -> loss: 16.118095]
+253 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+254 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+255 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+256 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+257 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+258 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+259 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+260 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+261 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+262 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+263 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+264 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+265 [Discriminator -> loss: 0.000034, acc.: 100.00%] [Generator -> loss: 16.118095]
+266 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+267 [Discriminator -> loss: 0.000013, acc.: 100.00%] [Generator -> loss: 16.118095]
+268 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+269 [Discriminator -> loss: 0.000027, acc.: 100.00%] [Generator -> loss: 16.118095]
+270 [Discriminator -> loss: 0.000012, acc.: 100.00%] [Generator -> loss: 16.118095]
+271 [Discriminator -> loss: 0.000044, acc.: 100.00%] [Generator -> loss: 16.118095]
+272 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+273 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+274 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+275 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+276 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+277 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+278 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+279 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+280 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+281 [Discriminator -> loss: 0.000037, acc.: 100.00%] [Generator -> loss: 16.118095]
+282 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+283 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+284 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+285 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+286 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+287 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+288 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+289 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+290 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+291 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+292 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+293 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+294 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+295 [Discriminator -> loss: 0.000012, acc.: 100.00%] [Generator -> loss: 16.118095]
+296 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+297 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+298 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+299 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+300 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+301 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+302 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+303 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+304 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+305 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+306 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+307 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+308 [Discriminator -> loss: 0.000049, acc.: 100.00%] [Generator -> loss: 16.118095]
+309 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+310 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+311 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+312 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+313 [Discriminator -> loss: 0.000011, acc.: 100.00%] [Generator -> loss: 16.118095]
+314 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+315 [Discriminator -> loss: 0.000012, acc.: 100.00%] [Generator -> loss: 16.118095]
+316 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+317 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+318 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+319 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+320 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+321 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+322 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+323 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+324 [Discriminator -> loss: 0.000053, acc.: 100.00%] [Generator -> loss: 16.118095]
+325 [Discriminator -> loss: 0.000020, acc.: 100.00%] [Generator -> loss: 16.118095]
+326 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+327 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+328 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+329 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+330 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+331 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+332 [Discriminator -> loss: 0.000018, acc.: 100.00%] [Generator -> loss: 16.118095]
+333 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+334 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+335 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+336 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+337 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+338 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+339 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+340 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+341 [Discriminator -> loss: 0.000021, acc.: 100.00%] [Generator -> loss: 16.118095]
+342 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+343 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+344 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+345 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+346 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+347 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+348 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+349 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+350 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+351 [Discriminator -> loss: 0.000014, acc.: 100.00%] [Generator -> loss: 16.118095]
+352 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+353 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+354 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+355 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+356 [Discriminator -> loss: 0.000020, acc.: 100.00%] [Generator -> loss: 16.118095]
+357 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+358 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+359 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+360 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+361 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+362 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+363 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+364 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+365 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+366 [Discriminator -> loss: 0.000024, acc.: 100.00%] [Generator -> loss: 16.118095]
+367 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+368 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+369 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+370 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+371 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+372 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+373 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+374 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+375 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+376 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+377 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+378 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+379 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+380 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+381 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+382 [Discriminator -> loss: 0.000009, acc.: 100.00%] [Generator -> loss: 16.118095]
+383 [Discriminator -> loss: 0.000025, acc.: 100.00%] [Generator -> loss: 16.118095]
+384 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+385 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+386 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+387 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+388 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+389 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+390 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+391 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+392 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+393 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+394 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+395 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+396 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+397 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+398 [Discriminator -> loss: 0.000018, acc.: 100.00%] [Generator -> loss: 16.118095]
+399 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+400 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+401 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+402 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+403 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+404 [Discriminator -> loss: 0.000011, acc.: 100.00%] [Generator -> loss: 16.118095]
+405 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+406 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+407 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+408 [Discriminator -> loss: 0.000000, acc.: 100.00%] [Generator -> loss: 16.118095]
+409 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+410 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+411 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+412 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+413 [Discriminator -> loss: 0.000010, acc.: 100.00%] [Generator -> loss: 16.118095]
+414 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+415 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+416 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+417 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+418 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+419 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+420 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+421 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+422 [Discriminator -> loss: 0.000027, acc.: 100.00%] [Generator -> loss: 16.118095]
+423 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+424 [Discriminator -> loss: 0.000000, acc.: 100.00%] [Generator -> loss: 16.118095]
+425 [Discriminator -> loss: 0.000006, acc.: 100.00%] [Generator -> loss: 16.118095]
+426 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+427 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+428 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+429 [Discriminator -> loss: 0.000000, acc.: 100.00%] [Generator -> loss: 16.118095]
+430 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+431 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+432 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+433 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+434 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+435 [Discriminator -> loss: 0.000051, acc.: 100.00%] [Generator -> loss: 16.118095]
+436 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+437 [Discriminator -> loss: 0.000011, acc.: 100.00%] [Generator -> loss: 16.118095]
+438 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+439 [Discriminator -> loss: 0.000012, acc.: 100.00%] [Generator -> loss: 16.118095]
+440 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+441 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+442 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+443 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+444 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+445 [Discriminator -> loss: 0.000019, acc.: 100.00%] [Generator -> loss: 16.118095]
+446 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+447 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+448 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+449 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+450 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+451 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+452 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+453 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+454 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+455 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+456 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+457 [Discriminator -> loss: 0.000094, acc.: 100.00%] [Generator -> loss: 16.118095]
+458 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+459 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+460 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+461 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+462 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+463 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+464 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+465 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+466 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+467 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+468 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+469 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+470 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+471 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+472 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+473 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+474 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+475 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+476 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+477 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+478 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+479 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+480 [Discriminator -> loss: 0.000098, acc.: 100.00%] [Generator -> loss: 16.118095]
+481 [Discriminator -> loss: 0.000008, acc.: 100.00%] [Generator -> loss: 16.118095]
+482 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+483 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+484 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+485 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+486 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+487 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+488 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+489 [Discriminator -> loss: 0.000004, acc.: 100.00%] [Generator -> loss: 16.118095]
+490 [Discriminator -> loss: 0.000000, acc.: 100.00%] [Generator -> loss: 16.118095]
+491 [Discriminator -> loss: 0.000002, acc.: 100.00%] [Generator -> loss: 16.118095]
+492 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+493 [Discriminator -> loss: 0.000007, acc.: 100.00%] [Generator -> loss: 16.118095]
+494 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+495 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+496 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+497 [Discriminator -> loss: 0.000003, acc.: 100.00%] [Generator -> loss: 16.118095]
+498 [Discriminator -> loss: 0.000005, acc.: 100.00%] [Generator -> loss: 16.118095]
+499 [Discriminator -> loss: 0.000001, acc.: 100.00%] [Generator -> loss: 16.118095]
+
+
+
+

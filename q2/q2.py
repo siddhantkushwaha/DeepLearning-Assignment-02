@@ -36,44 +36,45 @@ input_img = Input(shape=(x, y, channels))
 
 # %%
 
-def build_encoder(input_img):
-    conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(input_img)
-    pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
-    conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(pool1)
-    pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
-    conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(pool2)
-    pool3 = MaxPooling2D(pool_size=(2, 2))(conv3)
-    flatten = Flatten()(pool3)
-    dense1 = Dense(128, activation='relu')(flatten)
-    encoder = Dense(100, activation='relu')(dense1)
-    return encoder
+class AutoEncoder:
+    def __init__(self, input_img):
+        encoder = self.build_encoder(input_img)
+        decoder = self.build_decoder(encoder)
 
+        self.encoder_model = Model(input_img, encoder)
 
-def build_decoder(encoder):
-    dense3 = Dense(128, activation='relu')(encoder)
-    dense4 = Dense(128 * (16 * 16), activation='relu')(dense3)
-    reshape = Reshape((16, 16, 128))(dense4)
-    conv4 = Conv2D(128, (3, 3), activation='relu', padding='same')(reshape)
-    up1 = UpSampling2D((2, 2))(conv4)
-    conv5 = Conv2D(64, (3, 3), activation='relu', padding='same')(up1)
-    up2 = UpSampling2D((2, 2))(conv5)
-    conv6 = Conv2D(32, (3, 3), activation='relu', padding='same')(up2)
-    up3 = UpSampling2D((2, 2))(conv6)
-    decoder = Conv2D(3, (3, 3), activation='sigmoid', padding='same')(up3)
-    return decoder
+        self.autoencoder_model = Model(input_img, decoder)
 
+    def build_encoder(self, input_img):
+        conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(input_img)
+        pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
+        conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(pool1)
+        pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
+        conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(pool2)
+        pool3 = MaxPooling2D(pool_size=(2, 2))(conv3)
+        flatten = Flatten()(pool3)
+        dense1 = Dense(128, activation='relu')(flatten)
+        encoder = Dense(100, activation='relu')(dense1)
+        return encoder
 
-def build_autoencoder(input_img):
-    encoder = build_encoder(input_img)
-    decoder = build_decoder(encoder)
-    return encoder, decoder
+    def build_decoder(self, encoder):
+        dense3 = Dense(128, activation='relu')(encoder)
+        dense4 = Dense(128 * (16 * 16), activation='relu')(dense3)
+        reshape = Reshape((16, 16, 128))(dense4)
+        conv4 = Conv2D(128, (3, 3), activation='relu', padding='same')(reshape)
+        up1 = UpSampling2D((2, 2))(conv4)
+        conv5 = Conv2D(64, (3, 3), activation='relu', padding='same')(up1)
+        up2 = UpSampling2D((2, 2))(conv5)
+        conv6 = Conv2D(32, (3, 3), activation='relu', padding='same')(up2)
+        up3 = UpSampling2D((2, 2))(conv6)
+        decoder = Conv2D(3, (3, 3), activation='sigmoid', padding='same')(up3)
+        return decoder
 
 
 # %%
 
-encoder, decoder = build_autoencoder(input_img)
-autoencoder_model = Model(input_img, decoder)
-autoencoder_model.compile(optimizer='rmsprop', loss='mean_squared_error', metrics=['accuracy'])
+autoencoder = AutoEncoder(input_img)
+autoencoder.autoencoder_model.compile(optimizer='rmsprop', loss='mean_squared_error', metrics=['accuracy'])
 
 # %%
 
@@ -90,12 +91,11 @@ X = np.clip(X, 0., 1.)
 epochs = 100
 batch_size = 128
 
-autoencoder_model.fit(X, input_data, batch_size=batch_size, epochs=epochs, validation_split=0.3, verbose=1)
+autoencoder.autoencoder_model.fit(X, input_data, batch_size=batch_size, epochs=epochs, validation_split=0.3, verbose=1)
 
 # %%
 
-encoder_model = Model(input_img, encoder)
-encoded = encoder_model.predict(input_data)
+encoded = autoencoder.encoder_model.predict(input_data)
 
 # %%
 
